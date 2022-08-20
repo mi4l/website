@@ -1,1 +1,1 @@
-<img src="/.docs/synth.jpg" />
+<img src="./.docs/synth.jpg" />
