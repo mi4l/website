@@ -1,5 +1,0 @@
-class Synthesizer {
-  constructor() {}
-  
-  trigger() {}
-}
