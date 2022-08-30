@@ -1,12 +1,12 @@
 class EventBus {
   #events = {};
 
-  constructor(middleware = []) {
-    this.dispatch = this.#dispatchWithMiddleware(middleware);
+  constructor(middlewares = []) {
+    this.dispatch = this.#dispatchWithMiddleware(middlewares).bind(this);
   }
 
-  #dispatchWithMiddleware(middleware) {
-    const dispatch = event => {
+  #dispatchWithMiddleware(middlewares) {
+    function dispatch(event) {
       if (this.#events[event.type]) {
         this.#events[event.type].forEach(handler => handler(event));
       }
@@ -14,9 +14,9 @@ class EventBus {
       return this;
     };
 
-    return middleware.reduce(
-      (composedMiddleware, middleware) => event => middleware(composedMiddleware(event)),
-      dispatch
+    return middlewares.reduce(
+      (composedMiddleware, middleware) => event => composedMiddleware(middleware(event)),
+      dispatch.bind(this)
     );
   }
 
