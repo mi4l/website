@@ -17,5 +17,8 @@ Since this website's meant to be my personal site, I'll include the typical stuf
 **Non-standard Widgets**
 - Snake game
 - Step Sequencer
+  - Controls
+  - Synthesizer
+  - Sequencer
 - Synthesizer
 - Weird interactive "art" widgets
