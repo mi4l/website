@@ -1,5 +1,3 @@
-build/artifacts/**/*.js
-build/artifacts/**/*.json
 dist
 .DS_Store
 

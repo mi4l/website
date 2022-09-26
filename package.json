@@ -4,7 +4,7 @@
   "description": "This project is meant to serve as my personal website but also will exist as a way to dogfood web tech ideas I find interesting.  I plan on implementing a runtime micro frontend to compose all of the different widgets in this app.",
   "type": "module",
   "scripts": {
-    "build": "webpack --env commitMap={'/core':'1234'}",
+    "build": "webpack",
     "git-commits:components": "",
     "git-commits:core": "",
     "test": "echo \"Error: no test specified\" && exit 1"
