@@ -20,13 +20,19 @@ class PlaybackControls {
 
   pause() {
     this.#eventBus.dispatch(this.#EVENT_TYPES.PAUSE);
+
+    return this;
   }
 
   play() {
     this.#eventBus.dispatch(this.#EVENT_TYPES.PLAY);
+
+    return this;
   }
 
   stop() {
     this.#eventBus.dispatch(this.#EVENT_TYPES.STOP);
+
+    return this;
   }
 }
