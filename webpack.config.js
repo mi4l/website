@@ -4,8 +4,10 @@ const getLatestCommitForDirectory = directoryPath =>
   spawnSync('git', ['log', '-n', '1', '--pretty=format:%ct', directoryPath]).stdout.toString();
 
 const generateOutputFilename = pathData =>
-  `[name].${getLatestCommitForDirectory('./' + pathData.chunk.name)}.js`;
-  
+  `[name].${getLatestCommitForDirectory('./' + pathData.chunk.name)}.${{
+    'javascript': 'js'
+  }[pathData.contentHashType]}`;
+
 export default () => ({
   entry: {
     core: './core/index.js',
