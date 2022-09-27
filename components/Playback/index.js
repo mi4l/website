@@ -1,4 +1,4 @@
-class PlaybackControls {
+export class PlaybackControls {
   #eventBus;
 
   #EVENT_TYPES = {
@@ -7,15 +7,8 @@ class PlaybackControls {
     STOP: 'playback.stop'
   };
 
-  #PLAYBACK_STATES = {
-    PAUSE: 'PAUSE',
-    PLAY: 'PLAY',
-    STOP: 'STOP'
-  };
-
   contructor(eventBus) {
     this.#eventBus = eventBus;
-    this.#state = this.#PLAYBACK_STATES.STOP;
   }
 
   pause() {
