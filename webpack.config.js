@@ -11,8 +11,18 @@ const generateOutputFilename = pathData =>
 export default () => ({
   entry: {
     core: './core/index.js',
+    style: './www/style/base.scss'
   },
-  output: {
-    filename: generateOutputFilename
-  }
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: ['sass-loader']
+      }
+    ]
+  },
+  // output: {
+  //   filename: generateOutputFilename
+  // }
 });

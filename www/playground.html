@@ -1,0 +1,54 @@
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+    }
+
+    #Glow {
+      font-family: Monoton;
+      color: #FF1998;
+      font-size: 120px;
+
+      transition: 0.5s ease-in-out;
+      overflow: visible;
+      animation: glowingPulse 2s linear infinite;
+      text-decoration: none;
+    }
+
+    #GlowScript {
+      font-family: Pacifico;
+      color: #FF1998;
+      font-size: 120px;
+
+      transition: 0.5s ease-in-out;
+      overflow: visible;
+      animation: glowingPulse 2s linear infinite;
+      text-decoration: none;
+    }
+
+    @keyframes glowingPulse {
+      0% {
+        color: #fef051;
+        text-shadow: 0 0 4px rgb(255 153 0 / 20%), 0 0 8px rgb(255 153 0 / 30%), 0 0 12px rgb(255 0 0 / 20%), 0 0 16px rgb(255 0 0), 0 0 20px rgb(255 0 0), 0 0 40px rgb(255 0 0);
+      }
+
+      50% {
+        color: #ff2400;
+        text-shadow: 0 0 1px rgb(255 153 0 / 0%), 0 0 2px rgb(255 153 0 / 0%), 0 0 4px rgb(255 0 0 / 0%), 0 0 8px rgb(255 0 0 / 0%), 0 0 16px rgb(255 0 0 / 0%), 0 0 32px rgb(255 0 0 / 0%);
+      }
+
+      100% {
+        color: #fef051;
+        text-shadow: 0 0 4px rgb(255 153 0 / 20%), 0 0 8px rgb(255 153 0 / 30%), 0 0 12px rgb(255 0 0 / 20%), 0 0 16px rgb(255 0 0), 0 0 20px rgb(255 0 0), 0 0 40px rgb(255 0 0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 id="Glow">HELLO WORLD</h1>
+  <h1 id="GlowScript">HELLO WORLD</h1>
+</body>
