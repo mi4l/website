@@ -1,0 +1,10 @@
+@use 'partials/common';
+
+:root {
+  --color--black: #000;
+}
+
+html {
+  background-color: common.$black;
+  color: white;
+}
